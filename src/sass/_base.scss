@@ -130,6 +130,7 @@ li {
 /*           <section class="slider">                       */
 .slider {
   background-color: #004f80;
+  margin-top: 20px;
 }
 .carousel-item img {
   max-width: 59%;
@@ -193,44 +194,53 @@ li {
 
 
 /*           main                       */
-.content__box {
-  display: flex;
-  border-bottom: 1px dotted #a6acb3;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-}
-.content h2 {
+.news h2 {
   color: #6b7581;
   font-size: 18px;
   padding: 15px 0 15px 0;
 }
-.content__box_text {
-  margin-top: -10px;
+.news__block_img {
+  width: 285px;
 }
-.content__box_text a {
+.news__block_img img {
+  width: 100%;
+  min-width: 120px;
+}
+.news__block {
+  border-bottom: 1px dotted #a6acb3;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.news__block_text {
+  margin-top: -10px;
+  // max-width: 376px !important;
+}
+.news__block_text a {
   color: #000;
 }
-.content__box_text h3 {
+.news__block_text h3 {
   font-size: 13px;
   font-family: 'BundesSansWeb-Bold';
+  font-weight: bold;
   text-transform: uppercase;
   color: #004f80;
 }
-.content__box_text h4 {
+.news__block_text h4 {
   font-size: 18px;
   font-family: 'BundesSerifWeb-Regular';
 }
-.content__box_text p {
+.news__block_text p {
   font-size: 15px;
 }
 .fa-arrow-right {
   font-size: 15px;
   padding-right: 5px;
 }
-.content__box_link a {
+.news__block_link a {
   color: #004f80;
+  font-size: 15px;
 }
-.content__box-btn {
+.news__block_btn {
   font-size: 15px;
   color: #fff;
   background-color: #004f80;
@@ -241,13 +251,10 @@ li {
   padding: 5px 10px 7px;
   margin-bottom: 50px;
 }
-.content__box-btn:hover {
+.news__block_btn:hover {
   color: #fff;
   text-decoration: underline;
   background-color: #a6acb3;
-}
-.content__box_img a img {
-  width: 100%;
 }
 
 
@@ -256,14 +263,21 @@ li {
 
 /*           <rightbar__contacts>                       */
 .rightbar {
-  margin-left: 40px;
+  background-color: #a0cde9;
+  padding-top: 21px;
+}
+.maps {
+  background-color: #e0edf7;
+  padding-top: 21px;
+}
+.rightbar__icon {
+  padding-right: 0 !important;
+}
+.rightbar__icon i {
+  display: block;
 }
 .rightbar__contacts {
-  display: flex;
-  justify-content: space-between;
-  background-color: #a0cde9;
-  padding: 21px 25px 50px;
-  max-width: 404px;
+  padding: 0 50px 50px 15px !important;
 }
 
 .fa-question-circle,
@@ -272,20 +286,20 @@ li {
   color: #004f80;
   text-align: center;
 }
-.rightbar__contacts_map h4,
-.rightbar__contacts_map p,
-.rightbar__contacts_map p a,
+.rightbar__contacts h4,
+.rightbar__contacts p,
+.rightbar__contacts p a,
 .rightbar__info p,
 .rightbar__info a {
   font-size: 15px;
   margin-bottom: 0;
 }
-.rightbar__contacts_map h4 {
+.rightbar__contacts h4 {
   font-weight: bold;
   font-family: 'BundesSansWeb-Bold';
   margin-bottom: 0;
 }
-.rightbar__contacts_map h3,
+.rightbar__contacts h3,
 .rightbar__info h3 {
   color: #004f80;
   font-size: 18px;
@@ -303,16 +317,11 @@ li {
 .rightbar a {
   color: #004f80;
 }
-.blue {
-  height: 655px;
-  background-color: #e0edf7;
+.rightbar__contacts iframe {
+  padding: 20px 0;
 }
-.rightbar__contacts_map,
-.rightbar__info {
-  margin-left: 30px;
-}
-.border {
-  border-bottom: 1px dotted #004f80 !important;
+.maps__border {
+  border-bottom: 1px dotted #004f80;
   margin-top: 15px;
   margin-bottom: 10px;
 }
