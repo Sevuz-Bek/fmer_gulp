@@ -389,7 +389,7 @@ main .wrap {
 
 /*             responsive                      */
 
-/*
+
 
 .nav__box {
   width: 100%;
@@ -477,7 +477,7 @@ main .wrap {
   cursor: pointer;
 }
 
-*/
+
 
 /*                       @media                           */
 
@@ -517,6 +517,9 @@ main .wrap {
     padding: 20px 0 10px;
     width: 100%;
   }
+  .responsive__navbar {
+    display: block;
+}
 }
 @media (min-width: 820px) and (max-width: 1024px) {
 
