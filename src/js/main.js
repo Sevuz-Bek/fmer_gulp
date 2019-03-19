@@ -1,11 +1,3 @@
-$(document).ready(function () {
-    console.log('run')
-})
-
-// $(document).ready(function(){
-//     $(".owl-carousel").owlCarousel();
-//   });
-
 $(function () {
   $('.carousel').carousel({ interval:6000 });  
 
