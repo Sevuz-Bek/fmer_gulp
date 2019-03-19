@@ -30,7 +30,7 @@ $(function () {
       $(this).next('.nav__link').toggleClass('open');
   });
 
-  $('.nav__menu_btn').click(function(){
+  $('.header__menu_btn').click(function(){
       $('#background').toggleClass('open');
       $('#responsive').toggleClass('open');
   });
