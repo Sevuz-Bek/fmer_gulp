@@ -124,6 +124,7 @@ nav .header__menu_bottom {
   margin-bottom: 0px;
   li {
     margin-left: 40px;
+    line-height: 1;
   }
 }
 .header__menu_bottom li:last-child {
@@ -301,12 +302,12 @@ nav .header__menu_bottom {
 main .wrap {
   padding-right: 15px;
 }
-.sidebar__adress {
+.sidebar .sidebar__adress {
   background-color: #a0cde9;
   padding-top: 20px;
   padding-bottom: 50px;
 }
-.sidebar__maps {
+.sidebar .sidebar__maps {
   background-color: #e0edf7;
   padding-top: 20px;
 }
@@ -360,7 +361,9 @@ main .wrap {
   width: 40px;
   fill: #004f80;
 }
-
+.sidebar__maps .sidebar__icon svg {
+  width: 35px;
+}
 
 /*           footer                      */
 
@@ -391,6 +394,9 @@ main .wrap {
 .footer__links_box {
   margin-top: 25px;
   margin-bottom: 70px;
+  li {
+    margin-bottom: 7px;
+  }
 }
 .footer__links_box a,
 .footer__copy p,
@@ -400,14 +406,16 @@ main .wrap {
 }
 .footer__links_box a:hover {
   text-decoration: underline;
+  color: #fff;
 }
 .footer__title {
   font-family: 'BundesSansWeb-Bold';
   text-transform: uppercase;
   margin-bottom: 8px;
+  font-size: 13px;
 }
 .footer__copy {
-  padding-bottom: 61px;
+  padding-bottom: 30px;
 }
 .footer__btn {
   color: #004f80;
@@ -523,6 +531,9 @@ main .wrap {
 
 @media (max-width: 1024px) {
 
+  .header {
+    max-height: 100px;
+  }
   .header__menu nav,
   .sidebar__adress .sidebar__icon,
   .sidebar__maps .sidebar__icon,
@@ -545,6 +556,12 @@ main .wrap {
     width: 67px;
     height: 36px;
     margin-right: 11px;
+  }
+  .logo {
+    height: inherit;
+    img {
+      margin-top: 7px;
+    }
   }
   .sidebar__adress .sidebar__contacts,
   .sidebar__maps .sidebar__contacts {
