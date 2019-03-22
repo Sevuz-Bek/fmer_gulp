@@ -30,10 +30,6 @@ ul {
 li {
   list-style: none;
 }
-.anime {
-  transition: all 3s linear;
-  cursor: pointer;
-}
 .wrap {
   display: block;
   margin-left: auto;
@@ -51,7 +47,7 @@ li {
   margin-top: 30px;
   max-height: 93px;
 }
-.header__menu_top-item {
+.header__menu_top li {
   padding-top: 5px;
   padding-left: 12px;
   a {
@@ -133,16 +129,37 @@ nav .header__menu_bottom {
 .header__menu_bottom li:last-child {
   margin-right: 4px;
 }
-.header__nav-link {
+.header__menu_bottom a {
   color: #000;
   font-size: 20px;
   font-family: 'BundesSerifWeb-Regular';
   height: 60px;
+  &:hover {
+    color: #004f80;
+    text-decoration: none;
+    transition: all .3s linear;
+  }
 }
-.header__nav-link:hover {
-  color: #004f80;
-  text-decoration: none;
-  transition: all .3s linear;
+.fixedNav {
+  position: fixed;
+  background: url(../img/logo.png) no-repeat;
+  background-size: 5%;
+  background-position: top 38% left 10%;
+  top: 0;
+  left: 0;
+  margin-top: 0 !important;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 34px;
+  z-index: 10;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  transition: all .2s linear;
+  a {
+    font-size: 15px;
+  }
 }
 /*           SLIDER                       */
 
@@ -215,7 +232,7 @@ nav .header__menu_bottom {
   h2 {
   color: #6b7581;
   font-size: 18px;
-  padding: 15px 0 15px 0;
+  padding: 25px 0 15px 0;
   }
 }
 .teaser__list_img {

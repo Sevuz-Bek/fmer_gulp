@@ -40,6 +40,15 @@ $(function () {
       $('#responsive').toggleClass('open');
   });
   
+  var offset = $('.header__menu').offset();
+
+    $(window).scroll( function(){
+        if( $(window).scrollTop() > offset.top ) {
+            $('.header__menu_bottom').addClass('fixedNav');
+        } else {
+            $('.header__menu_bottom').removeClass('fixedNav');
+        }
+    });
 
 
   
