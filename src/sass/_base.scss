@@ -228,14 +228,14 @@ nav .header__menu_bottom {
 
 /*           main    infobox                       */
 
-.teaser { 
+.news { 
   h2 {
   color: #6b7581;
   font-size: 18px;
   padding: 25px 0 15px 0;
   }
 }
-.teaser__list_img {
+.news__article_img {
   width: 30%;
   margin-right: 30px;
   img {
@@ -243,12 +243,12 @@ nav .header__menu_bottom {
     min-width: 120px;
   }
 }
-.teaser__list {
+.news__article {
   border-bottom: 1px dotted #a6acb3;
   padding-bottom: 30px;
   margin-bottom: 30px;
   margin-right: 100px;
-  .teaser__list_text {
+  .news__article_text {
     margin-top: -10px;
     padding-right: 25px;
     width: 70%;
@@ -269,17 +269,17 @@ nav .header__menu_bottom {
     p {
       font-size: 15px;
     }
-    .teaser__list_link a {
+    .news__article_link a {
       color: #004f80;
       font-size: 15px;
     }
-    .teaser__list_link i {
+    .news__article i {
       font-size: 15px;
       padding-right: 5px;
     }
   }
 }
-.teaser__btn {
+.article__more {
   font-size: 15px;
   color: #fff;
   background-color: #004f80;
@@ -558,10 +558,10 @@ main .wrap {
 }
 @media (min-width: 820px) and (max-width: 1024px) {
 
-  .teaser {
-    .teaser__list {
+  .news {
+    .news__article {
       margin-right: 0;
-      .teaser__list_text {
+      .news__article_text {
         padding-right: 0;
       }
     }
@@ -574,11 +574,11 @@ main .wrap {
     flex-flow: column;
     justify-content: center;
   }
-  .teaser {
+  .news {
     min-width: 100%;
-    .teaser__list {
+    .news__article {
       margin-right: 0;
-      .teaser__list_text {
+      .news__article_text {
         padding-right: 0;
       }
     }
@@ -593,16 +593,16 @@ main .wrap {
   .wrap {
     padding: 0;
   }
-  .teaser,
+  .news,
   .infobox__adress .infobox__contacts, 
   .infobox__maps .infobox__contacts {
     padding-left: 50px !important;
   }
-  .teaser h2 {
+  .news h2 {
     text-align: center;
     margin: 20px 0;
   }
-  .teaser__btn {
+  .article__more {
     width: 100%;
     margin: 0 auto 20px;
   }
@@ -614,35 +614,35 @@ main .wrap {
   }
 }
 @media (min-width: 500px) and (max-width: 768px) {
-  .teaser {
+  .news {
     min-width: 100%;
-    .teaser__list {
+    .news__article {
       margin-right: 0;
-      .teaser__list_text {
+      .news__article_text {
         padding-right: 0;
       }
     }
   }
-  .teaser__btn {
+  .article__more {
     width: 100%;
     margin: 0 auto 20px;
   }
 }
 
 @media (min-width: 320px) and (max-width: 500px) {
-  .teaser__list_text p {
+  .news__article_text p {
     display: none;
   }
-  .teaser {
+  .news {
     min-width: 100%;
-    .teaser__list {
+    .news__article {
       margin-right: 0;
-      .teaser__list_text {
+      .news__article_text {
         padding-right: 0;
       }
     }
   }
-  .teaser__btn {
+  .article__more {
     width: 100%;
     margin: 0 auto 20px;
   }
