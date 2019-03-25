@@ -43,10 +43,10 @@ $(function () {
   var offset = $('.header__menu').offset();
 
     $(window).scroll( function(){
-        if( $(window).scrollTop() > offset.top ) {
-            $('.header__menu_bottom').addClass('fixedNav');
+        if( $(window).scrollTop() > 200 ) {
+            $('.fixed').addClass('fixedNav');
         } else {
-            $('.header__menu_bottom').removeClass('fixedNav');
+            $('.fixed').removeClass('fixedNav');
         }
     });
 

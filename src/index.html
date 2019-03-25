@@ -22,8 +22,8 @@
 
   <header class="header" id="header"> 
       <div class="wrap">
-        <div class="d-flex justify-content-between flex-nowrap logo">
-          <a href="https://www.bmbf.de/en/index.html"><img src="img/logo.jpg" alt="Logo"></a>
+        <div class="d-flex justify-content-between flex-nowrap">
+          <a href="https://www.bmbf.de/en/index.html" class="logo"><img src="img/logo.jpg" alt="Logo"></a>
           <div class="header__menu">
             <nav>
               <ul class="header__menu_top d-flex justify-content-end">
@@ -43,7 +43,7 @@
                   </svg>  
                 </button>
               </form>
-            <nav>
+            <nav class="fixed">
               <ul class="header__menu_bottom d-flex justify-content-end flex-nowrap">
                 <li><a href="#" title="Ministry">Ministry</a></li>
                 <li><a href="#" title="Education">Education</a></li>
@@ -286,9 +286,17 @@
                   </div>
                   <div class="col-lg-10 flex-column sidebar__contacts">
                     <h3>CONTACT US</h3>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
+                  xml:space="preserve">
+                  <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                      L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                      c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                      c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
+              </svg>
                     <h4>Federal Ministry of Education and Research</h4>
-                    <p>E-Mail: <a href="mailto:information@bmbf.bund.de"><i class="far fa-envelope"></i>Write to us</a></p>
-                    <p>DE-Mail: <a href="mailto:Poststelle@bmbf-bund.de-mail.de"><i class="far fa-envelope"></i>Write to us</a></p>
+                    <p>E-Mail: <a href="mailto:information@bmbf.bund.de"><i class="far fa-envelope"></i>information@bmbf.bund.de</a></p>
+                    <p>DE-Mail: <a href="mailto:Poststelle@bmbf-bund.de-mail.de"><i class="far fa-envelope"></i>Poststelle@bmbf_bund.de_mail.de</a></p>
                     <p>Phone: <a href="tel:+490228995783601">+49 (0)228 / 99 57-0</a></p>	
                     <p>Fax: <a href="tel:+490228995783601">+49 (0)228 / 99 57-83601</a></p>
                   </div>
@@ -322,6 +330,14 @@
                   </div>
                   <div class="col-lg-10 flex-column sidebar__contacts">
                     <h3>How to reach us</h3>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"       xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;"
+                  xml:space="preserve">
+                  <path d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441
+                      L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082
+                      c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647
+                      c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/>
+              </svg>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4496.027444604842!2d35.05347844850341!3d48.462252710169935!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2dca68ac71d%3A0x125a9d0d57df86a8!2z0YPQuy4g0JHQsNGA0YDQuNC60LDQtNC90LDRjywgMTUsINCU0L3QuNC_0YDQviwg0JTQvdC10L_RgNC-0L_QtdGC0YDQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDQ5MDAw!5e0!3m2!1sru!2sua!4v1551446634693" width="188" height="184" frameborder="0" style="border:0" allowfullscreen></iframe>
                     <p><a href="#"><i class="fas fa-download"></i>Your way to the Federal Ministry of Education and Research in Bonn, Heinemannstraße 2 and 6</a></p>
                     <div class="sidebar__border"></div>
@@ -612,6 +628,7 @@
           </li>
       </nav> 
   </div>  
+  
   
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
