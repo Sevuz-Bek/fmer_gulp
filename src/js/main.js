@@ -1,22 +1,7 @@
 $(function () {
   $('.carousel').carousel({ interval:6000 });  
 
-  $('#playButton').click(function () {
-      $('#carouselExampleIndicators').carousel('cycle');
-  });
-  $('#pauseButton').click(function () {
-      $('#carouselExampleIndicators').carousel('pause');
-  });
-  $("button").click(function() {
-  if ($(this).attr("id") === "pauseButton") {
-      $('#homeCarousel').carousel('pause');
-      $(this).attr("id", "playButton");
-      $("span", this).toggleClass("glyphicon-play glyphicon-pause");
-  } else {
-      $('#homeCarousel').carousel('cycle');
-      $(this).attr("id", "pauseButton");
-      $("span", this).toggleClass("glyphicon-pause glyphicon-play");
-  }
+ 
   });
 
   "use strict";
@@ -51,6 +36,3 @@ $(function () {
     });
 
 
-  
-
-});
