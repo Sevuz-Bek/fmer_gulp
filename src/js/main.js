@@ -48,3 +48,14 @@ $(window).on('scroll', function(){
 $btnTop.on('click', function(){
   $('html,body').animate({scrollTop:0}, 900)
 });
+
+
+// news uploading
+
+$('.article__more_btn').on('click', function(){
+  var blockArticle = '<article class="news__article d-flex flex-nowrap"><div class="news__article_img"><a href="#"><img src="img/img_1.jpg" alt=""></a></div><div class="news__article_text"><h3>INTERNATIONAL AFFAIRS</h3><a href="#">  <h4>Internationalization Strategy</h4><p>The Federal Government’s Strategy for the Internationalization of Education, Science and Research establishes a basis for stronger international networking activities, because no country can master the global challenges on its own.</p><div class="news__article_link"><a href="#"><i class="fas fa-arrow-right"></i>read more</a></div></a></div></article>';
+  $(this).before(blockArticle);
+});
+
+
+
