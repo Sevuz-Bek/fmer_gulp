@@ -61,18 +61,19 @@ li {
     transition: all .3s linear;
   }
 }
-.header__menu_btn {
-  display: none;
-  font-size: 15px;
-  text-transform: uppercase;
-  background: #004f80;
-  color: #fff;
-  border-radius: 4px;
-  padding: 9px 13px;
-  line-height: 15px;
-}
-.nav__menu_btn:hover {
-  color: #fff;
+.header__menu .header__menu_btn {
+    display: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: #004f80;
+    color: #fff;
+    border-radius: 4px;
+    padding: 9px 13px;
+    line-height: 15px;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 .header__search {
   display: flex;
@@ -245,6 +246,7 @@ nav .header__menu_bottom {
 
 /*           SLIDER                       */
 
+
 .slider {
   background-color: #004f80;
   // margin-top: 20px;
@@ -329,6 +331,47 @@ nav .header__menu_bottom {
   }
 }
 
+
+
+.slick-slide {
+  img {
+    height: 200px;
+    margin: 0 auto;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0px;
+  width: 100%;
+  li {
+    position: relative;
+    display: inline-block;
+    margin: 0px 5px;
+    padding: 0px;
+    cursor: pointer;
+
+    span {
+      border-radius: 10px;
+      border: 5px solid red;
+      display: inline-flex;
+      color: red;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+    }
+
+    &.slick-active span {
+      background: red;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
 
 
 
@@ -478,10 +521,11 @@ main .wrap {
 .sidebar__maps .sidebar__icon svg {
   width: 35px;
 }
+.news__article svg,
 .sidebar__contacts svg {
   display: none;
-  width: 14px;
-  height: 18px;
+  min-width: 12px;
+  height: 14px;
   fill: #004f80;
 }
 
@@ -509,6 +553,7 @@ main .wrap {
   flex-direction: column;
   width: 100%;
   max-height: 389px;
+  min-height: 100px;
   background-color: #455157;
 }
 .footer__links_box {
@@ -524,11 +569,12 @@ main .wrap {
 .footer__copy a {
   color: #fff;
 }
-.footer__links_box a:hover {
+.footer__links_box a:hover,
+.footer__copy a:hover  {
   text-decoration: underline;
   color: #fff;
 }
-.footer__title {
+.footer__links_box h6 {
   font-family: 'BundesSansWeb-Bold';
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -536,6 +582,16 @@ main .wrap {
 }
 .footer__copy {
   padding-bottom: 30px;
+  a {
+    padding-left: 10px;
+  }
+  p span {
+    padding-left: 10px;
+  }
+  .text-center {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .btn-top {
@@ -586,6 +642,7 @@ main .wrap {
     width: 14px;
     height: 18px;
     fill: #fff;
+    margin-top: 6px;
   }
 }
 .nav__link {
@@ -627,12 +684,12 @@ main .wrap {
 }
 #responsive.open {
   transform: translateX(0);
-  transition: all 400ms linear;
+  transition: all 200ms linear;
   cursor: pointer;
 }
 #responsive {
   transform: translateX(-100%);
-  transition: all 400ms linear;
+  transition: all 200ms linear;
   top: 10px;
   left: 0;
   position: fixed;
@@ -649,13 +706,13 @@ main .wrap {
   background: #004f80;
   opacity: 0.5;
   z-index: 50;
-  transition: all 400ms linear;
+  transition: all 200ms linear;
 }
 body {
   #background.open,
   #responsive {
   display: block;
-  transition: all 400ms linear;
+  transition: all 200ms linear;
   cursor: pointer;
   }
 }
@@ -687,8 +744,9 @@ body {
     .header__menu nav,
     .sidebar__adress .sidebar__icon,
     .sidebar__maps .sidebar__icon,
-    .footer__links_box {
-      display: none
+    .footer__links_box,
+    .carousel-caption p {
+      display: none !important;
     }
   }
   
@@ -696,19 +754,20 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    .header__search {
+      margin: 0;
+      input {
+        width: 40px;
+      } 
+    }
+    .header__menu_btn {
+      display: block;
+      width: 67px;
+      height: 36px;
+      margin-right: 11px;
+    }
   }
-  .header__search {
-    margin: 0;
-    input {
-      width: 40px;
-    } 
-  }
-  .header__menu_btn {
-    display: block;
-    width: 67px;
-    height: 36px;
-    margin-right: 11px;
-  }
+  
   .logo {
     height: inherit;
     img {
@@ -769,8 +828,7 @@ body {
     min-width: 100%;
     .sidebar__adress, 
     .sidebar__maps {
-      padding-left: 30px;
-      padding-bottom: 30px;
+      padding: 20px 50px;
     }
     .sidebar__adress .sidebar__icon,
     .sidebar__maps .sidebar__icon {
@@ -778,18 +836,16 @@ body {
       margin-bottom: -33px;
     }
   }
-  
-  .wrap {
-    padding: 0;
+  .news {
+    padding-left: 30px !important;
   }
-  .news,
+
   .sidebar__adress .sidebar__contacts, 
   .sidebar__maps .sidebar__contacts {
-    padding-left: 50px !important;
+    padding-left: 50px;
   }
   .news h2 {
     text-align: center;
-    margin: 20px 0;
   }
   .article__more_btn {
     width: 100%;
@@ -800,6 +856,18 @@ body {
   }
   .header__menu {
     margin-right: 20px;
+  }
+  .footer__copy .text-center {
+    flex-direction: column;
+    p {
+      margin: 0;
+    }
+  }
+  .footer__links .container {
+    margin-right: 0;
+  }
+  .wrap {
+    padding: 0;
   }
 }
 @media (max-width: 768px) {
@@ -812,7 +880,7 @@ body {
   .sidebar__adress,
   .sidebar__maps {
     height: 71px;
-    padding: 0 50px !important;
+    padding-right:0px !important ;
   }
   .sidebar__contacts svg {
     display: block;
@@ -823,22 +891,52 @@ body {
 }
 
 @media (max-width: 500px) {
-  .news__article_text p {
+  
+  .news__article {
+    display: flex;
+    align-items: center;
+    svg {
+      display: block;
+      transform: rotate(270deg);
+    }
+
+  }
+  .news__article_text {
+    p, .news__article_link {
     display: none;
+    }
+    h4 {
+      margin-right: 20px;
+    }
+  }
+  .news__article_img {
+    width: 119px;
+  }
+  .news__article_img {
+    margin-right: 15px;
   }
 }
-
+@media (max-width: 350px) {
+  .carousel-caption,
+  .carousel-indicators {
+    display: none !important;
+  }
+  .news h2 {
+    margin: 0;
+  }
+}
 
 @media (max-width: 320px) {
   .news__article_text p {
     display: none;
   }
-}
-@media (max-width: 820px) {
-  main .wrap .row {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
+  .header__menu {
+    margin-right: 0;
   }
 }
 
+/*                    @media slider                      */
+
+@media (max-width: 1170px) {
+
+}
